@@ -5,9 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/index.css" />
     <title>ExtraTime | Dev-Version</title>
+
     <div class="dateTimeHeader">
       <h1 class="currentTime"></h1>
       <h3 class="currentDate"></h3>
+    </div>
+
+    <div class="overtimeCalculatorForm">
+      <div class="calculatorSidesForm">
+        <div class="calculatorTimeInput">
+          <ul class="inputHeader">
+            <li>Day</li>
+            <li>Arrival</li>
+            <li>Break</li>
+            <li>Departure</li>
+            <li>Total</li>
+          </ul>
+          <ul class="inputMonday">
+            <li>Mo</li>
+            <div class="mondayInputs">
+              <input type="time" id="input_Monday_Arrival" />
+              <input type="time" id="input_Monday_Break" />
+              <input type="time" id="input_Monday_Departure" />
+              <input type="time" id="input_Monday_Total" />
+            </div>
+          </ul>
+          <ul class="inputTuesday">
+            <li>Tu</li>
+            <div class="tuesdayInputs">
+              <input type="time" id="input_Tuesday_Arrival" />
+              <input type="time" id="input_Tuesday_Break" />
+              <input type="time" id="input_Tuesday_Departure" />
+              <input type="time" id="input_Tuesday_Total" />
+            </div>
+          </ul>
+          <ul class="inputWednesday">
+            <li>We</li>
+            <div class="wednesdayInputs">
+              <input type="time" id="input_Wednesday_Arrival" />
+              <input type="time" id="input_Wednesday_Break" />
+              <input type="time" id="input_Wednesday_Departure" />
+              <input type="time" id="input_Wednesday_Total" />
+            </div>
+          </ul>
+          <ul class="inputThursday">
+            <li>Th</li>
+            <div class="thursdayInputs">
+              <input type="time" id="input_Thursday_Arrival" />
+              <input type="time" id="input_Thursday_Break" />
+              <input type="time" id="input_Thursday_Departure" />
+              <input type="time" id="input_Thursday_Total" />
+            </div>
+          </ul>
+          <ul class="inputFriday">
+            <li>Fr</li>
+            <div class="fridayInputs">
+              <input type="time" id="input_Friday_Arrival" />
+              <input type="time" id="input_Friday_Break" />
+              <input type="time" id="input_Friday_Departure" />
+              <input type="time" id="input_Friday_Total" />
+            </div>
+          </ul>
+        </div>
+        <div class="calculatorResultOutput"></div>
+      </div>
     </div>
   </head>
   <body></body>
