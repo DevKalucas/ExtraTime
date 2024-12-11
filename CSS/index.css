@@ -130,3 +130,31 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .fridayInputs input {
   margin-left: 20px;
 }
+
+.calculatorSidesForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.calculatorResultOutput {
+  padding-left: 0px;
+}
+
+.vLine {
+  margin-left: 30px;
+  width: 0.1vw;
+  border-width: 0;
+  color: #000;
+  background-color: #000;
+}
+
+.dayTags {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.dayTags li {
+  padding-bottom: 28px;
+}
