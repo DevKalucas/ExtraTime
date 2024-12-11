@@ -134,7 +134,7 @@ function calcTotalTime(day) {
   const arrivalTime = timeStringToMinutes(getArrivalTime(day));
   const breakTime = timeStringToMinutes(getBreakTime(day));
   const overtimeTime = timeStringToMinutes(getOverTime(day));
-  const totalTime = arrivalTime + breakTime + overtimeTime;
+  const totalTime = arrivalTime + overtimeTime;
   return minutesToTimeString(totalTime);
 }
 
@@ -180,3 +180,92 @@ overtimeTHInput.addEventListener("input", () => updateTotalTime("thursday"));
 arrivalFRInput.addEventListener("input", () => updateTotalTime("friday"));
 breakFRInput.addEventListener("input", () => updateTotalTime("friday"));
 overtimeFRInput.addEventListener("input", () => updateTotalTime("friday"));
+
+function calcDepartureTime(day) {
+  switch (day) {
+    case "monday":
+      const overtime = timeStringToMinutes(getOverTime("monday"));
+      const arrivalTime = timeStringToMinutes(getArrivalTime("monday"));
+      const breakTime = timeStringToMinutes(getBreakTime("monday"));
+
+      const calcDepartureTime = arrivalTime + overtime + breakTime + 450;
+      const departureTimeMO = minutesToTimeString(calcDepartureTime);
+
+      return departureTimeMO;
+      break;
+    case "tuesday":
+      const overtimeTU = timeStringToMinutes(getOverTime("tuesday"));
+      const arrivalTimeTU = timeStringToMinutes(getArrivalTime("tuesday"));
+      const breakTimeTU = timeStringToMinutes(getBreakTime("tuesday"));
+
+      const calcDepartureTimeTU =
+        arrivalTimeTU + overtimeTU + breakTimeTU + 450;
+      const departureTimeTU = minutesToTimeString(calcDepartureTimeTU);
+
+      return departureTimeTU;
+    case "wednesday":
+      const overtimeWE = timeStringToMinutes(getOverTime("wednesday"));
+      const arrivalTimeWE = timeStringToMinutes(getArrivalTime("wednesday"));
+      const breakTimeWE = timeStringToMinutes(getBreakTime("wednesday"));
+
+      const calcDepartureTimeWE =
+        arrivalTimeWE + overtimeWE + breakTimeWE + 450;
+      const departureTimeWE = minutesToTimeString(calcDepartureTimeWE);
+
+      return departureTimeWE;
+    case "thursday":
+      const overtimeTH = timeStringToMinutes(getOverTime("thursday"));
+      const arrivalTimeTH = timeStringToMinutes(getArrivalTime("thursday"));
+      const breakTimeTH = timeStringToMinutes(getBreakTime("thursday"));
+
+      const calcDepartureTimeTH =
+        arrivalTimeTH + overtimeTH + breakTimeTH + 450;
+      const departureTimeTH = minutesToTimeString(calcDepartureTimeTH);
+
+      return departureTimeTH;
+    case "friday":
+      const overtimeFR = timeStringToMinutes(getOverTime("friday"));
+      const arrivalTimeFR = timeStringToMinutes(getArrivalTime("friday"));
+      const breakTimeFR = timeStringToMinutes(getBreakTime("friday"));
+
+      const calcDepartureTimeFR =
+        arrivalTimeFR + overtimeFR + breakTimeFR + 450;
+      const departureTimeFR = minutesToTimeString(calcDepartureTimeFR);
+
+      return departureTimeFR;
+    default:
+  }
+}
+
+/////////////////
+// Display Times
+/////////////////
+
+const mondayOutput = document.getElementById("mondayTimeOutput");
+const tuesdayOutput = document.getElementById("tuesdayTimeOutput");
+const wednesdayOutput = document.getElementById("wednesdayTimeOutput");
+const thursdayOutput = document.getElementById("thursdayTimeOutput");
+const fridayOutput = document.getElementById("fridayTimeOutput");
+
+function displayTime() {
+  const departureDisplayMO = calcDepartureTime("monday");
+  mondayOutput.textContent = departureDisplayMO;
+
+  const departureDisplayTU = calcDepartureTime("tuesday");
+  tuesdayOutput.textContent = departureDisplayTU;
+
+  const departureDisplayWE = calcDepartureTime("wednesday");
+  wednesdayOutput.textContent = departureDisplayWE;
+
+  const departureDisplayTH = calcDepartureTime("thursday");
+  thursdayOutput.textContent = departureDisplayTH;
+
+  const departureDisplayFR = calcDepartureTime("friday");
+  fridayOutput.textContent = departureDisplayFR;
+}
+
+const calculateBttn = document.querySelector(".calcButton");
+
+calculateBttn.addEventListener("click", () => {
+  displayTime();
+});

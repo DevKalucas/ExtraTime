@@ -57,15 +57,32 @@
             <li><input type="time" id="input_Friday_Overtime" /></li>
             <li><input type="time" id="input_Friday_Total" /></li>
           </ul>
+          <button type="button" class="calcButton">Calc</button>
         </div>
         <hr class="vLine" />
         <div class="calculatorResultOutput">
+          <h3 class="departureTitle">Departure</h3>
           <ul class="dayTags">
-            <li>Monday</li>
-            <li>Tuesday</li>
-            <li>Wednesday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
+            <div class="mondayOutput">
+              <li>Monday</li>
+              <p id="mondayTimeOutput"></p>
+            </div>
+            <div class="tuesdayOutput">
+              <li>Tuesday</li>
+              <p id="tuesdayTimeOutput"></p>
+            </div>
+            <div class="wednesdayOutput">
+              <li>Wednesday</li>
+              <p id="wednesdayTimeOutput"></p>
+            </div>
+            <div class="thursdayOutput">
+              <li>Thursday</li>
+              <p id="thursdayTimeOutput"></p>
+            </div>
+            <div class="fridayOutput">
+              <li>Friday</li>
+              <p id="fridayTimeOutput"></p>
+            </div>
           </ul>
         </div>
       </div>

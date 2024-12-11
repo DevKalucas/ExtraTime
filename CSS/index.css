@@ -156,5 +156,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .dayTags li {
-  padding-bottom: 28px;
+  padding-bottom: 15px;
+}
+
+.departureTitle {
+  padding-left: 35px;
+}
+
+.dayTags p {
+  font-size: 23px;
+  margin-top: -15px;
+  margin-bottom: 10px;
 }
