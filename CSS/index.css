@@ -3,16 +3,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /* index.html */
-.dateTimeHeader {
-  /* padding: 1px;
-  padding-left: 10px; */
-}
-
-/* index.html */
-.currentTime {
-}
-
-/* index.html */
 .currentDate {
   margin-top: -20px;
 }
@@ -24,30 +14,42 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: gray;
 }
 
-/* index.html | overtimeCalculator */
+/* index.html */
 .inputHeader {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  justify-content: space-between;
 }
 
 /* index.html | overtimeCalculator */
 .inputHeader li {
   display: flex;
   padding-left: 35px;
+  flex: 1;
 }
 
 /* index.html | overtimeCalculator */
-.inputMonday {
+.inputMonday,
+.inputTuesday,
+.inputWednesday,
+.inputThursday,
+.inputFriday {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  justify-content: space-between;
 }
 
 /* index.html | overtimeCalculator */
-.inputMonday li {
+.inputMonday li,
+.inputTuesday li,
+.inputWednesday li,
+.inputThursday li,
+.inputFriday li {
   display: flex;
   padding-left: 35px;
+  flex: 1;
 }
 
 /* index.html | overtimeCalculator */
@@ -59,13 +61,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .mondayInputs input {
   margin-left: 20px;
-}
-
-/* index.html | overtimeCalculator */
-.inputTuesday {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
 }
 
 /* index.html | overtimeCalculator */
@@ -86,13 +81,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /* index.html | overtimeCalculator */
-.inputWednesday {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-/* index.html | overtimeCalculator */
 .inputWednesday li {
   display: flex;
   padding-left: 35px;
@@ -110,13 +98,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /* index.html | overtimeCalculator */
-.inputThursday {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-/* index.html | overtimeCalculator */
 .inputThursday li {
   display: flex;
   padding-left: 35px;
@@ -131,13 +112,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .thursdayInputs input {
   margin-left: 20px;
-}
-
-/* index.html | overtimeCalculator */
-.inputFriday {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
 }
 
 /* index.html | overtimeCalculator */
