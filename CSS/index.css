@@ -1,0 +1,170 @@
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* index.html */
+.currentDate {
+  margin-top: -20px;
+}
+
+.overtimeCalculatorForm {
+  display: flex;
+  color: #000;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+/* index.html */
+.inputHeader {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+/* index.html | overtimeCalculator */
+.inputHeader li {
+  display: flex;
+  padding-left: 35px;
+  flex: 1;
+}
+
+/* index.html | overtimeCalculator */
+.inputMonday,
+.inputTuesday,
+.inputWednesday,
+.inputThursday,
+.inputFriday {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+/* index.html | overtimeCalculator */
+.inputMonday li,
+.inputTuesday li,
+.inputWednesday li,
+.inputThursday li,
+.inputFriday li {
+  display: flex;
+  padding-left: 35px;
+  flex: 1;
+}
+
+/* index.html | overtimeCalculator */
+.mondayInputs {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.mondayInputs input {
+  margin-left: 20px;
+}
+
+/* index.html | overtimeCalculator */
+.inputTuesday li {
+  display: flex;
+  padding-left: 35px;
+}
+
+/* index.html | overtimeCalculator */
+.tuesdayInputs {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.tuesdayInputs input {
+  margin-left: 20px;
+}
+
+/* index.html | overtimeCalculator */
+.inputWednesday li {
+  display: flex;
+  padding-left: 35px;
+}
+
+/* index.html | overtimeCalculator */
+.wednesdayInputs {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.wednesdayInputs input {
+  margin-left: 20px;
+}
+
+/* index.html | overtimeCalculator */
+.inputThursday li {
+  display: flex;
+  padding-left: 35px;
+}
+
+/* index.html | overtimeCalculator */
+.thursdayInputs {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.thursdayInputs input {
+  margin-left: 20px;
+}
+
+/* index.html | overtimeCalculator */
+.inputFriday li {
+  display: flex;
+  padding-left: 35px;
+}
+
+/* index.html | overtimeCalculator */
+.fridayInputs {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.fridayInputs input {
+  margin-left: 20px;
+}
+
+.calculatorSidesForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.calculatorResultOutput {
+  padding-left: 0px;
+}
+
+.vLine {
+  margin-left: 30px;
+  width: 0.1vw;
+  border-width: 0;
+  color: #000;
+  background-color: #000;
+}
+
+.dayTags {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.dayTags li {
+  padding-bottom: 15px;
+}
+
+.departureTitle {
+  padding-left: 35px;
+}
+
+.dayTags p {
+  font-size: 23px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
