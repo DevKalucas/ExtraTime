@@ -12,6 +12,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: #000;
   border-radius: 10px;
   background-color: gray;
+  width: 650px;
 }
 
 /* index.html */
@@ -165,6 +166,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .dayTags p {
   font-size: 23px;
-  margin-top: -15px;
-  margin-bottom: 10px;
+  margin-top: -18px;
+  margin-bottom: 5px;
 }
+
+.departureTitle {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: -5px;
+}
+
+/* //////////////////////////
+Dark Mode Switch
+////////////////////////// */
