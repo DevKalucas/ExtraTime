@@ -66,54 +66,54 @@ const totalFRInput = document.getElementById("input_Friday_Total");
 function getArrivalTime(day) {
   switch (day) {
     case "monday":
-      return arrivalMOInput.value || "00:00";
+      return arrivalMOInput.value || "0:00";
     case "tuesday":
-      return arrivalTUInput.value || "00:00";
+      return arrivalTUInput.value || "0:00";
     case "wednesday":
-      return arrivalWEInput.value || "00:00";
+      return arrivalWEInput.value || "0:00";
     case "thursday":
-      return arrivalTHInput.value || "00:00";
+      return arrivalTHInput.value || "0:00";
     case "friday":
-      return arrivalFRInput.value || "00:00";
+      return arrivalFRInput.value || "0:00";
     default:
       console.log("Not a valid day!");
-      return "00:00";
+      return "0:00";
   }
 }
 
 function getBreakTime(day) {
   switch (day) {
     case "monday":
-      return breakMOInput.value || "00:00";
+      return breakMOInput.value || "0:00";
     case "tuesday":
-      return breakTUInput.value || "00:00";
+      return breakTUInput.value || "0:00";
     case "wednesday":
-      return breakWEInput.value || "00:00";
+      return breakWEInput.value || "0:00";
     case "thursday":
-      return breakTHInput.value || "00:00";
+      return breakTHInput.value || "0:00";
     case "friday":
-      return breakFRInput.value || "00:00";
+      return breakFRInput.value || "0:00";
     default:
       console.log("Not a valid day!");
-      return "00:00";
+      return "0:00";
   }
 }
 
 function getOverTime(day) {
   switch (day) {
     case "monday":
-      return overtimeMOInput.value || "00:00";
+      return overtimeMOInput.value || "0:00";
     case "tuesday":
-      return overtimeTUInput.value || "00:00";
+      return overtimeTUInput.value || "0:00";
     case "wednesday":
-      return overtimeWEInput.value || "00:00";
+      return overtimeWEInput.value || "0:00";
     case "thursday":
-      return overtimeTHInput.value || "00:00";
+      return overtimeTHInput.value || "0:00";
     case "friday":
-      return overtimeFRInput.value || "00:00";
+      return overtimeFRInput.value || "0:00";
     default:
       console.log("Not a valid day!");
-      return "00:00";
+      return "0:00";
   }
 }
 
@@ -188,51 +188,92 @@ function calcDepartureTime(day) {
       const arrivalTime = timeStringToMinutes(getArrivalTime("monday"));
       const breakTime = timeStringToMinutes(getBreakTime("monday"));
 
-      const calcDepartureTime = arrivalTime + overtime + breakTime + 450;
-      const departureTimeMO = minutesToTimeString(calcDepartureTime);
+      if (hasInput("monday")) {
+        const calcDepartureTime = arrivalTime + overtime + breakTime + 450;
+        const departureTimeMO = minutesToTimeString(calcDepartureTime);
 
-      return departureTimeMO;
+        return departureTimeMO;
+      } else {
+        const calcDepartureTime = arrivalTime;
+        const departureTimeMO = minutesToTimeString(calcDepartureTime);
+
+        return departureTimeMO;
+      }
+
       break;
     case "tuesday":
       const overtimeTU = timeStringToMinutes(getOverTime("tuesday"));
       const arrivalTimeTU = timeStringToMinutes(getArrivalTime("tuesday"));
       const breakTimeTU = timeStringToMinutes(getBreakTime("tuesday"));
 
-      const calcDepartureTimeTU =
-        arrivalTimeTU + overtimeTU + breakTimeTU + 450;
-      const departureTimeTU = minutesToTimeString(calcDepartureTimeTU);
+      if (hasInput("tuesday")) {
+        const calcDepartureTimeTU =
+          arrivalTimeTU + overtimeTU + breakTimeTU + 450;
+        const departureTimeTU = minutesToTimeString(calcDepartureTimeTU);
 
-      return departureTimeTU;
+        return departureTimeTU;
+      } else {
+        const calcDepartureTimeTU = arrivalTimeTU;
+        const departureTimeTU = minutesToTimeString(calcDepartureTimeTU);
+
+        return departureTimeTU;
+      }
+      break;
     case "wednesday":
       const overtimeWE = timeStringToMinutes(getOverTime("wednesday"));
       const arrivalTimeWE = timeStringToMinutes(getArrivalTime("wednesday"));
       const breakTimeWE = timeStringToMinutes(getBreakTime("wednesday"));
 
-      const calcDepartureTimeWE =
-        arrivalTimeWE + overtimeWE + breakTimeWE + 450;
-      const departureTimeWE = minutesToTimeString(calcDepartureTimeWE);
+      if (hasInput("wednesday")) {
+        const calcDepartureTimeWE =
+          arrivalTimeWE + overtimeWE + breakTimeWE + 450;
+        const departureTimeWE = minutesToTimeString(calcDepartureTimeWE);
 
-      return departureTimeWE;
+        return departureTimeWE;
+      } else {
+        const calcDepartureTimeWE = arrivalTimeWE;
+        const departureTimeWE = minutesToTimeString(calcDepartureTimeWE);
+
+        return departureTimeWE;
+      }
+
+      break;
     case "thursday":
       const overtimeTH = timeStringToMinutes(getOverTime("thursday"));
       const arrivalTimeTH = timeStringToMinutes(getArrivalTime("thursday"));
       const breakTimeTH = timeStringToMinutes(getBreakTime("thursday"));
 
-      const calcDepartureTimeTH =
-        arrivalTimeTH + overtimeTH + breakTimeTH + 450;
-      const departureTimeTH = minutesToTimeString(calcDepartureTimeTH);
+      if (hasInput("thursday")) {
+        const calcDepartureTimeTH =
+          arrivalTimeTH + overtimeTH + breakTimeTH + 450;
+        const departureTimeTH = minutesToTimeString(calcDepartureTimeTH);
 
-      return departureTimeTH;
+        return departureTimeTH;
+      } else {
+        const calcDepartureTimeTH = arrivalTimeTH;
+        const departureTimeTH = minutesToTimeString(calcDepartureTimeTH);
+
+        return departureTimeTH;
+      }
+
     case "friday":
       const overtimeFR = timeStringToMinutes(getOverTime("friday"));
       const arrivalTimeFR = timeStringToMinutes(getArrivalTime("friday"));
       const breakTimeFR = timeStringToMinutes(getBreakTime("friday"));
 
-      const calcDepartureTimeFR =
-        arrivalTimeFR + overtimeFR + breakTimeFR + 450;
-      const departureTimeFR = minutesToTimeString(calcDepartureTimeFR);
+      if (hasInput("friday")) {
+        const calcDepartureTimeFR =
+          arrivalTimeFR + overtimeFR + breakTimeFR + 450;
+        const departureTimeFR = minutesToTimeString(calcDepartureTimeFR);
 
-      return departureTimeFR;
+        return departureTimeFR;
+      } else {
+        const calcDepartureTimeFR = arrivalTimeFR;
+        const departureTimeFR = minutesToTimeString(calcDepartureTimeFR);
+
+        return departureTimeFR;
+      }
+
     default:
   }
 }
@@ -269,3 +310,43 @@ const calculateBttn = document.querySelector(".calcButton");
 calculateBttn.addEventListener("click", () => {
   displayTime();
 });
+
+function hasInput(day) {
+  switch (day) {
+    case "monday":
+      if (arrivalMOInput.value != null) {
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "tuesday":
+      if (arrivalTUInput.value != null) {
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "wednesday":
+      if (arrivalWEInput.value != null) {
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "thursday":
+      if (arrivalTHInput.value != null) {
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "friday":
+      if (arrivalFRInput.value != null) {
+        return false;
+      } else {
+        return true;
+      }
+      break;
+  }
+}
