@@ -311,10 +311,14 @@ calculateBttn.addEventListener("click", () => {
   displayTime();
 });
 
+/////////////////
+// Check if input is not null
+
 function hasInput(day) {
   switch (day) {
     case "monday":
       if (arrivalMOInput.value != null) {
+        notificationManager("warning", "No Arrival Time selected!", 3000);
         return false;
       } else {
         return true;
@@ -322,6 +326,7 @@ function hasInput(day) {
       break;
     case "tuesday":
       if (arrivalTUInput.value != null) {
+        notificationManager("warning", "No Arrival Time selected!", 3000);
         return false;
       } else {
         return true;
@@ -329,6 +334,7 @@ function hasInput(day) {
       break;
     case "wednesday":
       if (arrivalWEInput.value != null) {
+        notificationManager("warning", "No Arrival Time selected!", 3000);
         return false;
       } else {
         return true;
@@ -336,6 +342,7 @@ function hasInput(day) {
       break;
     case "thursday":
       if (arrivalTHInput.value != null) {
+        notificationManager("warning", "No Arrival Time selected!", 3000);
         return false;
       } else {
         return true;
@@ -343,6 +350,7 @@ function hasInput(day) {
       break;
     case "friday":
       if (arrivalFRInput.value != null) {
+        notificationManager("warning", "No Arrival Time selected!", 3000);
         return false;
       } else {
         return true;
@@ -350,3 +358,84 @@ function hasInput(day) {
       break;
   }
 }
+
+/////////////////
+// Notifications
+
+/* Get all Elements */
+const notifManager = document.querySelector(".notifManger");
+const notifTitle = document.getElementById("notifTitle");
+const notifMessage = document.getElementById("notifMessage");
+
+const notificationManager = function (type, message, duration) {
+  switch (type) {
+    case "success":
+      notifDesigner("success", message);
+      break;
+    case "info":
+      notifDesigner("info", message);
+      break;
+    case "warning":
+      notifDesigner("warning", message);
+      break;
+    case "error":
+      notifDesigner("error", message);
+      break;
+    default:
+      console.error("No Notification type selected!");
+  }
+  /* Add the class which makes the Notification visible */
+  notifManager.classList.add("notifShow");
+
+  /* Remove the class after a period of time */
+  setTimeout(() => {
+    notifManager.classList.remove("notifShow");
+  }, duration);
+};
+
+const notifDesigner = function (type, message) {
+  notifManager.style.backgroundColor =
+    type === "success"
+      ? "#14532d"
+      : type === "info"
+      ? "#1e3a8a"
+      : type === "warning"
+      ? "#713f12"
+      : type === "error"
+      ? "#7f1d1d"
+      : "#fff";
+
+  notifTitle.textContent =
+    type === "success"
+      ? "Success - "
+      : type === "info"
+      ? "Info - "
+      : type === "warning"
+      ? "Warning - "
+      : type === "error"
+      ? "Error - "
+      : "Placeholder";
+
+  notifTitle.style.color =
+    type === "success"
+      ? "#dcfcdc"
+      : type === "info"
+      ? "#889ccb"
+      : type === "warning"
+      ? "#efe6b0"
+      : type === "error"
+      ? "#ecc7c7"
+      : "#fff";
+
+  notifMessage.textContent = message;
+  notifMessage.style.color =
+    type === "success"
+      ? "#dcfcdc"
+      : type === "info"
+      ? "#889ccb"
+      : type === "warning"
+      ? "#efe6b0"
+      : type === "error"
+      ? "#ecc7c7"
+      : "#fff";
+};
