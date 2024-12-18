@@ -176,6 +176,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-bottom: -5px;
 }
 
+/* Calculate Button */
+.calcButton {
+  background-color: #45d00b;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
 /* Notification Manager */
 .notifManger {
   display: flex;

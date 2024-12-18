@@ -181,6 +181,7 @@ arrivalFRInput.addEventListener("input", () => updateTotalTime("friday"));
 breakFRInput.addEventListener("input", () => updateTotalTime("friday"));
 overtimeFRInput.addEventListener("input", () => updateTotalTime("friday"));
 
+// BUG
 function calcDepartureTime(day) {
   switch (day) {
     case "monday":
@@ -313,7 +314,7 @@ calculateBttn.addEventListener("click", () => {
 
 /////////////////
 // Check if input is not null
-
+// BUG
 function hasInput(day) {
   switch (day) {
     case "monday":
@@ -366,6 +367,10 @@ function hasInput(day) {
 const notifManager = document.querySelector(".notifManger");
 const notifTitle = document.getElementById("notifTitle");
 const notifMessage = document.getElementById("notifMessage");
+
+/**
+ * @param {string} type The type of the Notification Message (warning, success, info, error)
+ */
 
 const notificationManager = function (type, message, duration) {
   switch (type) {
