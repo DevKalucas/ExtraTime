@@ -183,6 +183,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   border: none;
   border-radius: 10px;
+  margin-left: 85%;
 }
 
 /* Notification Manager */

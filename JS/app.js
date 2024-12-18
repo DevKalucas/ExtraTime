@@ -31,7 +31,6 @@ currentDateH.textContent = getCurrentDate();
 
 /////////////////
 // Time Calculation
-/////////////////
 
 // Monday input values
 const arrivalMOInput = document.getElementById("input_Monday_Arrival");
@@ -61,15 +60,15 @@ const overtimeFRInput = document.getElementById("input_Friday_Overtime");
 function getArrivalTime(day) {
   switch (day) {
     case "monday":
-      return arrivalMOInput.value || "0:00";
+      return arrivalMOInput.value || "00:00";
     case "tuesday":
-      return arrivalTUInput.value || "0:00";
+      return arrivalTUInput.value || "00:00";
     case "wednesday":
-      return arrivalWEInput.value || "0:00";
+      return arrivalWEInput.value || "00:00";
     case "thursday":
-      return arrivalTHInput.value || "0:00";
+      return arrivalTHInput.value || "00:00";
     case "friday":
-      return arrivalFRInput.value || "0:00";
+      return arrivalFRInput.value || "00:00";
     default:
       console.log("Not a valid day!");
       return "0:00";
@@ -79,15 +78,15 @@ function getArrivalTime(day) {
 function getBreakTime(day) {
   switch (day) {
     case "monday":
-      return breakMOInput.value || "0:00";
+      return breakMOInput.value || "00:00";
     case "tuesday":
-      return breakTUInput.value || "0:00";
+      return breakTUInput.value || "00:00";
     case "wednesday":
-      return breakWEInput.value || "0:00";
+      return breakWEInput.value || "00:00";
     case "thursday":
-      return breakTHInput.value || "0:00";
+      return breakTHInput.value || "00:00";
     case "friday":
-      return breakFRInput.value || "0:00";
+      return breakFRInput.value || "00:00";
     default:
       console.log("Not a valid day!");
       return "0:00";
@@ -97,15 +96,15 @@ function getBreakTime(day) {
 function getOverTime(day) {
   switch (day) {
     case "monday":
-      return overtimeMOInput.value || "0:00";
+      return overtimeMOInput.value || "00:00";
     case "tuesday":
-      return overtimeTUInput.value || "0:00";
+      return overtimeTUInput.value || "00:00";
     case "wednesday":
-      return overtimeWEInput.value || "0:00";
+      return overtimeWEInput.value || "00:00";
     case "thursday":
-      return overtimeTHInput.value || "0:00";
+      return overtimeTHInput.value || "00:00";
     case "friday":
-      return overtimeFRInput.value || "0:00";
+      return overtimeFRInput.value || "00:00";
     default:
       console.log("Not a valid day!");
       return "0:00";
@@ -125,6 +124,7 @@ function minutesToTimeString(minutes) {
   return `${hours}:${mins}`;
 }
 
+// BUG If first time no input abd
 function calcDepartureTime(day) {
   switch (day) {
     case "monday":
@@ -132,7 +132,15 @@ function calcDepartureTime(day) {
       const arrivalTime = timeStringToMinutes(getArrivalTime("monday"));
       const breakTime = timeStringToMinutes(getBreakTime("monday"));
 
-      const calcDepartureTime = arrivalTime + overtime + breakTime + 450;
+      let calcDepartureTime;
+
+      if (arrivalMOInput.value != null) {
+        calcDepartureTime = arrivalTime;
+        console.log(calcDepartureTime);
+      } else {
+        calcDepartureTime = arrivalTime + overtime + breakTime + 450;
+      }
+
       const departureTimeMO = minutesToTimeString(calcDepartureTime);
       return departureTimeMO;
 
@@ -188,7 +196,6 @@ function calcDepartureTime(day) {
 
 /////////////////
 // Display Times
-/////////////////
 
 const mondayOutput = document.getElementById("mondayTimeOutput");
 const tuesdayOutput = document.getElementById("tuesdayTimeOutput");
@@ -198,19 +205,19 @@ const fridayOutput = document.getElementById("fridayTimeOutput");
 
 function displayTime() {
   const departureDisplayMO = calcDepartureTime("monday");
-  mondayOutput.textContent = departureDisplayMO;
+  mondayOutput.textContent = departureDisplayMO || "00:00";
 
   const departureDisplayTU = calcDepartureTime("tuesday");
-  tuesdayOutput.textContent = departureDisplayTU;
+  tuesdayOutput.textContent = departureDisplayTU || "00:00";
 
   const departureDisplayWE = calcDepartureTime("wednesday");
-  wednesdayOutput.textContent = departureDisplayWE;
+  wednesdayOutput.textContent = departureDisplayWE || "00:00";
 
   const departureDisplayTH = calcDepartureTime("thursday");
-  thursdayOutput.textContent = departureDisplayTH;
+  thursdayOutput.textContent = departureDisplayTH || "00:00";
 
   const departureDisplayFR = calcDepartureTime("friday");
-  fridayOutput.textContent = departureDisplayFR;
+  fridayOutput.textContent = departureDisplayFR || "00:00";
 }
 
 const calculateBttn = document.querySelector(".calcButton");
@@ -229,6 +236,8 @@ const notifMessage = document.getElementById("notifMessage");
 
 /**
  * @param {string} type The type of the Notification Message (warning, success, info, error)
+ * @param {string} message The message that will be displayed on the Notification Popup
+ * @param {int} duration How long the Notification Popup will be displayed
  */
 
 const notificationManager = function (type, message, duration) {
