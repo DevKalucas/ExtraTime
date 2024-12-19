@@ -27,7 +27,7 @@
 }
 
 .landingTitleDescription {
-  margin-top: 60px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -44,4 +44,58 @@
   margin: 0 auto;
   font-size: 1.2em;
   width: 45%;
+}
+
+/*///////////////////////////////////////*/
+/* Call to Action Button*/
+.callToAction {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+  height: 40px;
+}
+
+.callToActionButton {
+  cursor: pointer;
+  background-color: #00c896;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  color: #4b4d52;
+}
+
+/*///////////////////////////////////////*/
+/* Cards*/
+
+.firstCard {
+  display: flex;
+  flex-direction: row;
+  margin-left: 45%;
+  margin-top: 7%;
+}
+
+#firstCardIcon {
+  color: #a6cbbe;
+  font-size: 1.8em;
+  padding-top: 0.8em;
+  margin-right: 0.5em;
+}
+
+.firstCardTitle {
+  color: #89aaa9;
+  font-size: 1.7em;
+}
+
+.firstCardDescription {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1em;
+  margin-left: 45%;
+}
+
+.firstCardDescriptionText {
+  color: #738a90;
+  font-size: 1.1em;
+  width: 22%;
+  text-align: center;
 }
