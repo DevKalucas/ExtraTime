@@ -1,3 +1,7 @@
+* {
+  background-color: #333;
+}
+
 input[type="time"]::-webkit-calendar-picker-indicator {
   display: none;
 }
@@ -12,8 +16,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   color: #000;
   border-radius: 10px;
-  background-color: gray;
+  background-color: #4b4d52;
   width: 650px;
+}
+
+.calculatorSidesForm,
+.calculatorTimeInput,
+.calculatorResultOutput,
+.dayTags {
+  background-color: #4b4d52;
 }
 
 /* index.html */
