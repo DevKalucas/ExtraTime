@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/index.css" />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
     <title>ExtraTime | Dev-Version</title>
   </head>
   <body>
     <div class="dateTimeHeader">
       <h1 class="currentTime"></h1>
       <h3 class="currentDate"></h3>
+    </div>
+
+    <!-- Notification Template to Display Notification´s -->
+    <div class="notifManger">
+      <i class="fa fa-info-circle" id="notifManager-icon"></i>
+      <h1 id="notifTitle">Placeholder</h1>
+
+      <p id="notifMessage">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
     </div>
 
     <div class="overtimeCalculatorForm">
@@ -20,44 +34,38 @@
             <li>Arrival</li>
             <li>Break</li>
             <li>Overtime</li>
-            <li>Total</li>
           </ul>
           <ul class="inputMonday">
             <li>Mo</li>
             <li><input type="time" id="input_Monday_Arrival" /></li>
             <li><input type="time" id="input_Monday_Break" /></li>
             <li><input type="time" id="input_Monday_Overtime" /></li>
-            <li><input type="time" id="input_Monday_Total" /></li>
           </ul>
           <ul class="inputTuesday">
             <li>Tu</li>
             <li><input type="time" id="input_Tuesday_Arrival" /></li>
             <li><input type="time" id="input_Tuesday_Break" /></li>
             <li><input type="time" id="input_Tuesday_Overtime" /></li>
-            <li><input type="time" id="input_Tuesday_Total" /></li>
           </ul>
           <ul class="inputWednesday">
             <li>We</li>
             <li><input type="time" id="input_Wednesday_Arrival" /></li>
             <li><input type="time" id="input_Wednesday_Break" /></li>
             <li><input type="time" id="input_Wednesday_Overtime" /></li>
-            <li><input type="time" id="input_Wednesday_Total" /></li>
           </ul>
           <ul class="inputThursday">
             <li>Th</li>
             <li><input type="time" id="input_Thursday_Arrival" /></li>
             <li><input type="time" id="input_Thursday_Break" /></li>
             <li><input type="time" id="input_Thursday_Overtime" /></li>
-            <li><input type="time" id="input_Thursday_Total" /></li>
           </ul>
           <ul class="inputFriday">
             <li>Fr</li>
             <li><input type="time" id="input_Friday_Arrival" /></li>
             <li><input type="time" id="input_Friday_Break" /></li>
             <li><input type="time" id="input_Friday_Overtime" /></li>
-            <li><input type="time" id="input_Friday_Total" /></li>
           </ul>
-          <button type="button" class="calcButton">Calc</button>
+          <button type="button" class="calcButton">Calculate</button>
         </div>
         <hr class="vLine" />
         <div class="calculatorResultOutput">
