@@ -8,6 +8,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .overtimeCalculatorForm {
+  margin-top: 20px;
   display: flex;
   color: #000;
   border-radius: 10px;

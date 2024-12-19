@@ -1,0 +1,31 @@
+/* Navigation Bar */
+.navBarList {
+  position: sticky;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navBarList li {
+  float: left;
+}
+
+.navBarList li a {
+  display: block;
+  color: #faf8ff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navBarList li a:hover {
+  border-bottom: 3px solid #007d5c;
+}
+
+.activeNavBar {
+  border-bottom: 3px solid #00a97f;
+}
