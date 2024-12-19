@@ -134,13 +134,11 @@ function calcDepartureTime(day) {
 
       let calcDepartureTime;
 
-      if (arrivalMOInput.value != null) {
-        calcDepartureTime = arrivalTime;
-        console.log(calcDepartureTime);
+      if (!hasInput("monday")) {
+        return;
       } else {
         calcDepartureTime = arrivalTime + overtime + breakTime + 450;
       }
-
       const departureTimeMO = minutesToTimeString(calcDepartureTime);
       return departureTimeMO;
 
@@ -149,10 +147,14 @@ function calcDepartureTime(day) {
       const arrivalTimeTU = timeStringToMinutes(getArrivalTime("tuesday"));
       const breakTimeTU = timeStringToMinutes(getBreakTime("tuesday"));
 
-      const calcDepartureTimeTU =
-        arrivalTimeTU + overtimeTU + breakTimeTU + 450;
-      const departureTimeTU = minutesToTimeString(calcDepartureTimeTU);
+      let calcDepartureTimeTU;
 
+      if (!hasInput("tuesday")) {
+        return;
+      } else {
+        calcDepartureTimeTU = arrivalTimeTU + overtimeTU + breakTimeTU + 450;
+      }
+      const departureTimeTU = minutesToTimeString(calcDepartureTimeTU);
       return departureTimeTU;
 
       break;
@@ -161,22 +163,29 @@ function calcDepartureTime(day) {
       const arrivalTimeWE = timeStringToMinutes(getArrivalTime("wednesday"));
       const breakTimeWE = timeStringToMinutes(getBreakTime("wednesday"));
 
-      const calcDepartureTimeWE =
-        arrivalTimeWE + overtimeWE + breakTimeWE + 450;
+      let calcDepartureTimeWE;
+
+      if (!hasInput("wednesday")) {
+        return;
+      } else {
+        calcDepartureTimeWE = arrivalTimeWE + overtimeWE + breakTimeWE + 450;
+      }
       const departureTimeWE = minutesToTimeString(calcDepartureTimeWE);
-
       return departureTimeWE;
-
       break;
     case "thursday":
       const overtimeTH = timeStringToMinutes(getOverTime("thursday"));
       const arrivalTimeTH = timeStringToMinutes(getArrivalTime("thursday"));
       const breakTimeTH = timeStringToMinutes(getBreakTime("thursday"));
 
-      const calcDepartureTimeTH =
-        arrivalTimeTH + overtimeTH + breakTimeTH + 450;
-      const departureTimeTH = minutesToTimeString(calcDepartureTimeTH);
+      let calcDepartureTimeTH;
 
+      if (!hasInput("thursday")) {
+        return;
+      } else {
+        calcDepartureTimeTH = arrivalTimeTH + overtimeTH + breakTimeTH + 450;
+      }
+      const departureTimeTH = minutesToTimeString(calcDepartureTimeTH);
       return departureTimeTH;
 
     case "friday":
@@ -184,13 +193,89 @@ function calcDepartureTime(day) {
       const arrivalTimeFR = timeStringToMinutes(getArrivalTime("friday"));
       const breakTimeFR = timeStringToMinutes(getBreakTime("friday"));
 
-      const calcDepartureTimeFR =
-        arrivalTimeFR + overtimeFR + breakTimeFR + 450;
+      let calcDepartureTimeFR;
+
+      if (!hasInput("friday")) {
+        return;
+      } else {
+        calcDepartureTimeFR = arrivalTimeFR + overtimeFR + breakTimeFR + 450;
+      }
       const departureTimeFR = minutesToTimeString(calcDepartureTimeFR);
-
       return departureTimeFR;
-
     default:
+      console.log("Not a valid day!");
+      return false;
+  }
+}
+
+/////////////////
+// Check inputs
+
+function hasInput(day) {
+  switch (day) {
+    case "monday":
+      if (
+        arrivalMOInput.value == "" ||
+        breakMOInput.value == "" ||
+        overtimeMOInput.value == ""
+      ) {
+        notificationManager("error", "All fields must be filled!", 3000);
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "tuesday":
+      if (
+        arrivalTUInput.value == "" ||
+        breakTUInput.value == "" ||
+        overtimeTUInput.value == ""
+      ) {
+        notificationManager("error", "All fields must be filled!", 3000);
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "wednesday":
+      if (
+        arrivalWEInput.value == "" ||
+        breakWEInput.value == "" ||
+        overtimeWEInput.value == ""
+      ) {
+        notificationManager("error", "All fields must be filled!", 3000);
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "thursday":
+      if (
+        arrivalTHInput.value == "" ||
+        breakTHInput.value == "" ||
+        overtimeTHInput.value == ""
+      ) {
+        notificationManager("error", "All fields must be filled!", 3000);
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    case "friday":
+      if (
+        arrivalFRInput.value == "" ||
+        breakFRInput.value == "" ||
+        overtimeFRInput.value == ""
+      ) {
+        notificationManager("error", "All fields must be filled!", 3000);
+        return false;
+      } else {
+        return true;
+      }
+      break;
+    default:
+      console.log("Not a valid day!");
+      return false;
   }
 }
 
