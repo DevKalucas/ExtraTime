@@ -2,12 +2,46 @@
   background-color: #333;
 }
 
-/* index.html */
+/*///////////////////////////////////////*/
+/* Display of the current time and date with big Title and little description*/
 .currentDate {
-  color: white;
-  margin-top: -20px;
+  margin: 0 auto;
+  color: #738a90;
+  text-align: center;
+  font-size: 1em;
 }
 
 .currentTime {
-  color: white;
+  margin: 0 auto;
+  color: #738a90;
+  text-align: center;
+  font-size: 3em;
+}
+
+.dateTimeHeader {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landingTitleDescription {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.landingTitleDescription .bigTitle {
+  color: #a6cbbe;
+  font-size: 6em;
+  margin-bottom: 2%;
+}
+
+.landingTitleDescription .bigDescription {
+  color: #89aaa9;
+  padding-top: -50px;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.2em;
+  width: 45%;
 }
