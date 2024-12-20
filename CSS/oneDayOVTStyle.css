@@ -1,3 +1,30 @@
 * {
   background-color: #333;
 }
+
+/* Overtime Calculator */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="time"] {
+  color: #89aaa9;
+  cursor: pointer;
+}
+
+.inputHeader {
+  display: flex;
+  color: #a6cbbe;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 15%;
+  padding-left: 2.2em;
+}
