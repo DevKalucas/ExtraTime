@@ -12,6 +12,8 @@ input[type="time"] {
   cursor: pointer;
 }
 
+/* ////////////////////////// */
+/* Inputs  */
 .inputHeader {
   display: flex;
   color: #a6cbbe;
@@ -21,10 +23,55 @@ input[type="time"] {
   width: 15%;
 }
 
+.inputHeader li {
+  margin-right: 2em;
+}
+
 .inputs {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 15%;
-  padding-left: 2.2em;
+  padding-left: 2.5em;
+}
+
+.inputs input {
+  margin-right: 2.7em;
+}
+
+/* ////////////////////////// */
+/* Vertical Line  */
+.vLine {
+  margin-left: 1vw;
+  border-left: 3px solid #89aaa9;
+  height: 6.5vw;
+  border-radius: 1px;
+}
+
+/* ////////////////////////// */
+/* Calculator Form  */
+.overtimeCalculatorForm {
+  padding-top: 2%;
+  display: flex;
+}
+
+/* ////////////////////////// */
+/* Outputs  */
+.outputs {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-top: 0.3vw;
+}
+
+.outputs li {
+  padding-bottom: 1vw;
+  display: flex;
+  flex-direction: column;
+  color: #a6cbbe;
+  align-items: center; /* Zentriert den Text und die Zeitangabe */
+}
+
+.outputs p {
+  color: #89aaa9;
+  margin: 0; /* Entfernt den Standardabstand */
 }
