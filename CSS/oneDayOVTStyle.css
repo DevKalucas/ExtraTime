@@ -43,7 +43,7 @@ input[type="time"] {
 .vLine {
   margin-left: 1vw;
   border-left: 3px solid #89aaa9;
-  height: 6.5vw;
+  height: 8vw;
   border-radius: 1px;
 }
 
@@ -60,7 +60,7 @@ input[type="time"] {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  margin-top: 0.3vw;
+  margin-top: 1vw;
 }
 
 .outputs li {
@@ -74,4 +74,15 @@ input[type="time"] {
 .outputs p {
   color: #89aaa9;
   margin: 0; /* Entfernt den Standardabstand */
+}
+
+/* ////////////////////////// */
+/* Calculate Button  */
+.calculateBttn {
+  display: flex;
+  margin-left: 15em;
+  background-color: #89aaa9;
+  border: none;
+  border-radius: 3px;
+  color: #333;
 }
