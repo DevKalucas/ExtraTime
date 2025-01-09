@@ -4,15 +4,38 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 input[type="time"] {
-  color: #89aaa9;
+  color: var(--light_text);
   cursor: pointer;
+}
+
+:root {
+  --light_background: #e0e8ff;
+  --light_hover: #b8c6ff;
+  --light_headline: #3748e1;
+  --light_text: #5f72ed;
+  --light_button: #8c9efa;
+  --dark_background: #181a3e;
+  --dark_hover: #1f2452;
+  --dark_headline: #3240c2;
+  --dark_text: #2b3699;
+  --dark_button: #242b70;
 }
 
 /* ////////////////////////// */
 /* Inputs  */
+.overtimeCalculatorForm {
+  background-color: var(--light_text);
+  width: 35%;
+  border-radius: 15px;
+  margin-left: 3vw;
+}
+
 .inputHeader {
   display: flex;
-  color: #a6cbbe;
+  color: var(--light_headline);
+  font-weight: 700;
+  padding-left: 1.7vw;
+  margin-bottom: 1vw;
   flex-direction: row;
   list-style-type: none;
   justify-content: space-between;
@@ -38,8 +61,8 @@ input[type="time"] {
 /* Vertical Line  */
 .vLine {
   margin-left: 1vw;
-  border-left: 3px solid #89aaa9;
-  height: 8vw;
+  border-left: 3px solid var(--light_background);
+  height: 6vw;
   border-radius: 1px;
 }
 
@@ -60,25 +83,93 @@ input[type="time"] {
 }
 
 .outputs li {
+  margin-top: -1vw;
   padding-bottom: 1vw;
   display: flex;
   flex-direction: column;
-  color: #a6cbbe;
+  color: var(--light_headline);
+  font-weight: 700;
+  padding-left: 1.8vw;
   align-items: center; /* Zentriert den Text und die Zeitangabe */
 }
 
 .outputs p {
-  color: #89aaa9;
+  color: var(--light_background);
+  font-weight: 600;
   margin: 0; /* Entfernt den Standardabstand */
 }
 
 /* ////////////////////////// */
 /* Calculate Button  */
 .calculateBttn {
+  cursor: pointer;
   display: flex;
-  margin-left: 15em;
-  background-color: #89aaa9;
+  justify-content: center;
+  margin-top: 0.5vw;
+  height: 1.5vw;
+  width: 7vw;
+  margin-left: 3vw;
+  background-color: var(--light_button);
   border: none;
   border-radius: 3px;
-  color: #333;
+  color: var(--light_text);
+  font-weight: 700;
+  font-size: 1vw;
+}
+
+/* ////////////////////////// */
+/* Main Part  */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2.5vw;
+  padding-left: 3vw;
+}
+
+.first_heading h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+}
+
+.second_heading h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+}
+
+.second_info,
+.first_info p {
+  color: var(--light_text);
+  width: 70%;
+  font-size: 1.11rem;
+  padding-top: 0.5rem;
+  margin-bottom: 2vw;
+}
+
+/* ////////////////////////// */
+/* FAQ  */
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2.5vw;
+  padding-left: 3vw;
+}
+
+.faq h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+  margin-bottom: 0.7vw;
+}
+
+.faq p {
+  color: var(--light_text);
+  width: 70%;
+  font-size: 1.11rem;
+  padding-bottom: 0.7vw;
+}
+
+.faq p strong {
+  color: var(--light_headline);
+  font-size: 1.15rem;
 }
