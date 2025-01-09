@@ -77,6 +77,12 @@ header .navBarContainer {
   color: var(--light_text);
   margin-left: 4.5rem;
   display: inline-block;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: var(--light_hover);
+  transform: scale(1.05);
 }
 
 .btn {
@@ -91,6 +97,23 @@ header .navBarContainer {
 
 .btn:hover {
   background-color: var(--light_hover);
+  transform: scale(1) !important;
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown {
+  width: 15%;
+  background-color: var(--light_hover);
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
 }
 
 /*///////////////////////////////////////*/
