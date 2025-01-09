@@ -8,47 +8,61 @@
     <title>ExtraTime | Dev-Version</title>
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <div class="navBar">
-      <ul class="navBarList">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="oneDayOvertime.html" class="activeNavBar">Day Calculator</a>
-        </li>
-        <li><a href="weekOvertime.html">Week Calculator</a></li>
-        <li style="float: right"><a href="about.html">About</a></li>
-      </ul>
-    </div>
+    <div class="big-wrapper">
+      <!-- Navigation Bar -->
+      <header>
+        <div class="navBarContainer">
+          <div class="name">
+            <h3><a href="index.html">ExtraTime</a></h3>
+          </div>
+          <div class="links">
+            <ul>
+              <li>
+                <a href="#">Calculator</a>
+                <ul class="dropdown">
+                  <li><a href="oneDayOvertime.html">Daily</a></li>
+                  <li><a href="weekOvertime.html">Weekly</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Updates</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="#" class="btn">Sign up</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
-    <!-- Overtime Calculator -->
-    <div class="overtimeCalculatorForm">
-      <div class="inputSideForm">
-        <ul class="inputHeader">
-          <li>Arrival</li>
-          <li>Break</li>
-          <li>Overtime</li>
-        </ul>
-        <div class="inputs">
-          <input type="time" id="input_Arrival" />
-          <input type="time" id="input_Break" />
-          <input type="time" id="input_Overtime" />
+      <!-- Overtime Calculator -->
+      <div class="overtimeCalculatorForm">
+        <div class="inputSideForm">
+          <ul class="inputHeader">
+            <li>Arrival</li>
+            <li>Break</li>
+            <li>Overtime</li>
+          </ul>
+          <div class="inputs">
+            <input type="time" id="input_Arrival" />
+            <input type="time" id="input_Break" />
+            <input type="time" id="input_Overtime" />
+          </div>
+        </div>
+        <div class="vLine"></div>
+        <div class="outputSideForm">
+          <ul class="outputs">
+            <li>
+              Departure Time
+              <p class="departureTime">00:00</p>
+            </li>
+            <li>
+              Worked Hours
+              <p class="workedHours">00:00</p>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="vLine"></div>
-      <div class="outputSideForm">
-        <ul class="outputs">
-          <li>
-            Departure Time
-            <p class="departureTime">00:00</p>
-          </li>
-          <li>
-            Worked Hours
-            <p class="workedHours">00:00</p>
-          </li>
-        </ul>
-      </div>
+      <button class="calculateBttn">Calculate</button>
     </div>
-    <button class="calculateBttn">Calculate</button>
   </body>
   <script src="JS/oneDayOVTScript.js"></script>
 </html>

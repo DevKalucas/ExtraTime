@@ -60,7 +60,7 @@ header .navBarContainer {
   align-items: center;
 }
 
-.name h3 {
+.name h3 a {
   color: var(--light_headline);
   font-size: 1.55rem;
   line-height: 1.2;

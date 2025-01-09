@@ -1,31 +1,118 @@
-/* Navigation Bar */
-.navBarList {
-  position: sticky;
-  list-style-type: none;
-  margin: 0;
+/*///////////////////////////////////////*/
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*///////////////////////////////////////*/
+/* Color Variables */
+:root {
+  --light_background: #e0e8ff;
+  --light_hover: #b8c6ff;
+  --light_headline: #3748e1;
+  --light_text: #5f72ed;
+  --light_button: #8c9efa;
+  --dark_background: #181a3e;
+  --dark_hover: #1f2452;
+  --dark_headline: #3240c2;
+  --dark_text: #2b3699;
+  --dark_button: #242b70;
+}
+
+/*///////////////////////////////////////*/
+/* General Settings */
+*,
+*::before,
+*::after {
   padding: 0;
-  top: 0;
-  width: 100%;
-  overflow: hidden;
-  background-color: #333;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.navBarList li {
-  float: left;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.navBarList li a {
-  display: block;
-  color: #89aaa9;
-  text-align: center;
-  padding: 14px 16px;
+a {
   text-decoration: none;
 }
 
-.navBarList li a:hover {
-  border-bottom: 3px solid #007d5c;
+.big-wrapper {
+  padding: 1.7rem 0 2rem;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--light_background);
 }
 
-.activeNavBar {
-  border-bottom: 3px solid #00a97f;
+/*///////////////////////////////////////*/
+/* Navigation Bar*/
+.navBarContainer {
+  position: relative;
+  max-width: 81rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  z-index: 10;
+}
+
+header .navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name h3 a {
+  color: var(--light_headline);
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.links ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.links a {
+  color: var(--light_text);
+  margin-left: 4.5rem;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: var(--light_hover);
+  transform: scale(1.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  color: var(--light_text) !important;
+  background-color: var(--light_button);
+  border-radius: 16px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--light_hover);
+  transform: scale(1) !important;
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown {
+  width: 15%;
+  background-color: var(--light_button);
+  border-radius: 15px;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
 }

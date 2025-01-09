@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/weekOVTStyle.css" />
     <link rel="stylesheet" href="CSS/navBarStyle.css" />
     <link
       rel="stylesheet"
@@ -12,97 +12,111 @@
     <title>ExtraTime | Dev-Version</title>
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <div class="navBar">
-      <ul class="navBarList">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="oneDayOvertime.html">Day Calculator</a></li>
-        <li>
-          <a href="weekOvertime.html" class="activeNavBar">Week Calculator</a>
-        </li>
-        <li style="float: right"><a href="about.html">About</a></li>
-      </ul>
-    </div>
-
-    <!-- Notification Template to Display Notification´s -->
-    <div class="notifManger">
-      <i class="fa fa-info-circle" id="notifManager-icon"></i>
-      <h1 id="notifTitle">Placeholder</h1>
-
-      <p id="notifMessage">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-    </div>
-
-    <div class="overtimeCalculatorForm">
-      <div class="calculatorSidesForm">
-        <div class="calculatorTimeInput">
-          <ul class="inputHeader">
-            <li>Day</li>
-            <li>Arrival</li>
-            <li>Break</li>
-            <li>Overtime</li>
-          </ul>
-          <ul class="inputMonday">
-            <li>Mo</li>
-            <li><input type="time" id="input_Monday_Arrival" /></li>
-            <li><input type="time" id="input_Monday_Break" /></li>
-            <li><input type="time" id="input_Monday_Overtime" /></li>
-          </ul>
-          <ul class="inputTuesday">
-            <li>Tu</li>
-            <li><input type="time" id="input_Tuesday_Arrival" /></li>
-            <li><input type="time" id="input_Tuesday_Break" /></li>
-            <li><input type="time" id="input_Tuesday_Overtime" /></li>
-          </ul>
-          <ul class="inputWednesday">
-            <li>We</li>
-            <li><input type="time" id="input_Wednesday_Arrival" /></li>
-            <li><input type="time" id="input_Wednesday_Break" /></li>
-            <li><input type="time" id="input_Wednesday_Overtime" /></li>
-          </ul>
-          <ul class="inputThursday">
-            <li>Th</li>
-            <li><input type="time" id="input_Thursday_Arrival" /></li>
-            <li><input type="time" id="input_Thursday_Break" /></li>
-            <li><input type="time" id="input_Thursday_Overtime" /></li>
-          </ul>
-          <ul class="inputFriday">
-            <li>Fr</li>
-            <li><input type="time" id="input_Friday_Arrival" /></li>
-            <li><input type="time" id="input_Friday_Break" /></li>
-            <li><input type="time" id="input_Friday_Overtime" /></li>
-          </ul>
-          <button type="button" class="calcButton">Calculate</button>
+    <div class="big-wrapper">
+      <!-- Navigation Bar -->
+      <header>
+        <div class="navBarContainer">
+          <div class="name">
+            <h3><a href="index.html">ExtraTime</a></h3>
+          </div>
+          <div class="links">
+            <ul>
+              <li>
+                <a href="#">Calculator</a>
+                <ul class="dropdown">
+                  <li><a href="oneDayOvertime.html">Daily</a></li>
+                  <li><a href="weekOvertime.html">Weekly</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Updates</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="#" class="btn">Sign up</a></li>
+            </ul>
+          </div>
         </div>
-        <hr class="vLine" />
-        <div class="calculatorResultOutput">
-          <h3 class="departureTitle">Departure</h3>
-          <ul class="dayTags">
-            <div class="mondayOutput">
-              <li>Monday</li>
-              <p id="mondayTimeOutput">00:00</p>
-            </div>
-            <div class="tuesdayOutput">
-              <li>Tuesday</li>
-              <p id="tuesdayTimeOutput">00:00</p>
-            </div>
-            <div class="wednesdayOutput">
-              <li>Wednesday</li>
-              <p id="wednesdayTimeOutput">00:00</p>
-            </div>
-            <div class="thursdayOutput">
-              <li>Thursday</li>
-              <p id="thursdayTimeOutput">00:00</p>
-            </div>
-            <div class="fridayOutput">
-              <li>Friday</li>
-              <p id="fridayTimeOutput">00:00</p>
-            </div>
-          </ul>
+      </header>
+
+      <!-- Notification Template to Display Notification´s -->
+      <div class="notifManger">
+        <i class="fa fa-info-circle" id="notifManager-icon"></i>
+        <h1 id="notifTitle">Placeholder</h1>
+
+        <p id="notifMessage">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <div class="overtimeCalculatorForm">
+        <div class="calculatorSidesForm">
+          <div class="calculatorTimeInput">
+            <ul class="inputHeader">
+              <li>Day</li>
+              <li>Arrival</li>
+              <li>Break</li>
+              <li>Overtime</li>
+            </ul>
+            <ul class="inputMonday">
+              <li>Mo</li>
+              <li><input type="time" id="input_Monday_Arrival" /></li>
+              <li><input type="time" id="input_Monday_Break" /></li>
+              <li><input type="time" id="input_Monday_Overtime" /></li>
+            </ul>
+            <ul class="inputTuesday">
+              <li>Tu</li>
+              <li><input type="time" id="input_Tuesday_Arrival" /></li>
+              <li><input type="time" id="input_Tuesday_Break" /></li>
+              <li><input type="time" id="input_Tuesday_Overtime" /></li>
+            </ul>
+            <ul class="inputWednesday">
+              <li>We</li>
+              <li><input type="time" id="input_Wednesday_Arrival" /></li>
+              <li><input type="time" id="input_Wednesday_Break" /></li>
+              <li><input type="time" id="input_Wednesday_Overtime" /></li>
+            </ul>
+            <ul class="inputThursday">
+              <li>Th</li>
+              <li><input type="time" id="input_Thursday_Arrival" /></li>
+              <li><input type="time" id="input_Thursday_Break" /></li>
+              <li><input type="time" id="input_Thursday_Overtime" /></li>
+            </ul>
+            <ul class="inputFriday">
+              <li>Fr</li>
+              <li><input type="time" id="input_Friday_Arrival" /></li>
+              <li><input type="time" id="input_Friday_Break" /></li>
+              <li><input type="time" id="input_Friday_Overtime" /></li>
+            </ul>
+            <button type="button" class="calcButton">Calculate</button>
+          </div>
+          <hr class="vLine" />
+          <div class="calculatorResultOutput">
+            <h3 class="departureTitle">Departure</h3>
+            <ul class="dayTags">
+              <div class="mondayOutput">
+                <li>Monday</li>
+                <p id="mondayTimeOutput">00:00</p>
+              </div>
+              <div class="tuesdayOutput">
+                <li>Tuesday</li>
+                <p id="tuesdayTimeOutput">00:00</p>
+              </div>
+              <div class="wednesdayOutput">
+                <li>Wednesday</li>
+                <p id="wednesdayTimeOutput">00:00</p>
+              </div>
+              <div class="thursdayOutput">
+                <li>Thursday</li>
+                <p id="thursdayTimeOutput">00:00</p>
+              </div>
+              <div class="fridayOutput">
+                <li>Friday</li>
+                <p id="fridayTimeOutput">00:00</p>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
+      <script src="JS/app.js"></script>
     </div>
-    <script src="JS/app.js"></script>
   </body>
 </html>
