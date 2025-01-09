@@ -106,7 +106,8 @@ ul li ul.dropdown li {
 
 ul li ul.dropdown {
   width: 15%;
-  background-color: var(--light_hover);
+  background-color: var(--light_button);
+  border-radius: 15px;
   position: absolute;
   z-index: 999;
   display: none;
@@ -120,14 +121,15 @@ ul li:hover ul.dropdown {
 /* Display of the current time and date with big Title and little description*/
 .currentDate {
   margin: 0 auto;
-  color: #738a90;
+  color: var(--light_text);
   text-align: center;
   font-size: 1em;
+  margin-top: -0.5rem;
 }
 
 .currentTime {
   margin: 0 auto;
-  color: #738a90;
+  color: var(--light_headline);
   text-align: center;
   font-size: 3em;
 }
