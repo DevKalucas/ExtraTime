@@ -2,6 +2,35 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
+/* ////////////////////////// */
+/* Main Part  */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 6rem;
+  padding-left: 10rem;
+}
+
+.first_heading h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+}
+
+.second_heading h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+}
+
+.second_info,
+.first_info p {
+  color: var(--light_text);
+  width: 70%;
+  font-size: 1.11rem;
+  padding-top: 0.5rem;
+  margin-bottom: 2vw;
+}
+
 /* index.html */
 .currentDate {
   margin-top: -20px;
@@ -13,7 +42,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: #000;
   border-radius: 10px;
   background-color: #4b4d52;
-  width: 650px;
+  width: 600px;
+  margin-left: 10rem;
+  padding-left: 2rem;
 }
 
 .calculatorSidesForm,
@@ -239,4 +270,32 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   transition: right 1 ease-in-out;
   opacity: 1;
   right: 10px;
+}
+
+/* ////////////////////////// */
+/* FAQ  */
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2.5vw;
+  padding-left: 10rem;
+}
+
+.faq h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+  margin-bottom: 0.7vw;
+}
+
+.faq p {
+  color: var(--light_text);
+  width: 70%;
+  font-size: 1.11rem;
+  padding-bottom: 0.7vw;
+}
+
+.faq p strong {
+  color: var(--light_headline);
+  font-size: 1.15rem;
 }
