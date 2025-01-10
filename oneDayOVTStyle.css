@@ -27,7 +27,7 @@ input[type="time"] {
   background-color: var(--light_text);
   width: 35%;
   border-radius: 15px;
-  margin-left: 3vw;
+  margin-left: 10rem;
 }
 
 .inputHeader {
@@ -108,7 +108,7 @@ input[type="time"] {
   margin-top: 0.5vw;
   height: 1.5vw;
   width: 7vw;
-  margin-left: 3vw;
+  margin-left: 10rem;
   background-color: var(--light_button);
   border: none;
   border-radius: 3px;
@@ -123,8 +123,8 @@ input[type="time"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 2.5vw;
-  padding-left: 3vw;
+  margin-top: 6rem;
+  padding-left: 10rem;
 }
 
 .first_heading h3 {
@@ -153,7 +153,7 @@ input[type="time"] {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 2.5vw;
-  padding-left: 3vw;
+  padding-left: 10rem;
 }
 
 .faq h3 {

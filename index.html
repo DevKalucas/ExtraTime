@@ -9,6 +9,10 @@
     />
     <link rel="stylesheet" href="CSS/indexStyle.css" />
     <link rel="stylesheet" href="CSS/navBarStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>ExtraTime</title>
   </head>
   <body>
@@ -22,27 +26,46 @@
           <div class="links">
             <ul>
               <li>
-                <a href="#">Calculator</a>
+                <a href="#">Calculator <i class="fa fa-caret-down"></i></a>
                 <ul class="dropdown">
                   <li><a href="oneDayOvertime.html">Daily</a></li>
                   <li><a href="weekOvertime.html">Weekly</a></li>
                 </ul>
               </li>
               <li><a href="#">Features</a></li>
-              <li><a href="#">Updates</a></li>
+              <li>
+                <a href="#">News</a>
+              </li>
               <li><a href="about.html">About us</a></li>
-              <li><a href="#" class="btn">Sign up</a></li>
+              <li>
+                <a href="#" class="btn"><i class="fa fa-gear"></i></a>
+              </li>
             </ul>
           </div>
         </div>
       </header>
 
-      <!-- Main Area -->
-
       <!--  Header with current date and time -->
       <div class="dateTimeHeader">
         <h1 class="currentTime"></h1>
         <h3 class="currentDate"></h3>
+      </div>
+
+      <!-- Main Area -->
+      <div class="main-area">
+        <div class="big-title">
+          <h1>ExtraTime</h1>
+          <h1 class="second-headline">Your all in one time calculator.</h1>
+        </div>
+        <p class="text">
+          Aren't you tired of calculating your own overtime? Or have you always
+          wanted to know when Christmas is from a certain date? Don't worry!
+          ExtraTime is here for you! <br />
+          Press the button and get started right away.
+        </p>
+        <div class="start-btn">
+          <a href="oneDayOvertime.html" class="btn">Start now</a>
+        </div>
       </div>
 
       <!-- Big Title -->
@@ -81,6 +104,5 @@
       </div> -->
     </div>
   </body>
-  <script src="JS/indexScript.js"></script>
   <script src="JS/timeDisplay.js"></script>
 </html>
