@@ -41,80 +41,8 @@ a {
   min-height: 100vh;
   overflow: hidden;
   background-color: var(--light_background);
-}
-
-/*///////////////////////////////////////*/
-/* Navigation Bar*/
-.navBarContainer {
-  position: relative;
-  max-width: 81rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 3rem;
-  z-index: 10;
-}
-
-header .navBarContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.name h3 a {
-  color: var(--light_headline);
-  font-size: 1.55rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
-
-.links ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.links a {
-  color: var(--light_text);
-  margin-left: 4.5rem;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.links a:hover {
-  color: var(--light_hover);
-  transform: scale(1.05);
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.9rem;
-  color: var(--light_text) !important;
-  background-color: var(--light_button);
-  border-radius: 16px;
-  text-transform: capitalize;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--light_hover);
-  transform: scale(1) !important;
-}
-
-ul li ul.dropdown li {
-  display: block;
-}
-
-ul li ul.dropdown {
-  width: 15%;
-  background-color: var(--light_button);
-  border-radius: 15px;
-  position: absolute;
-  z-index: 999;
-  display: none;
-}
-
-ul li:hover ul.dropdown {
-  display: block;
+  flex-direction: column;
 }
 
 /*///////////////////////////////////////*/
@@ -140,4 +68,40 @@ ul li:hover ul.dropdown {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+/*///////////////////////////////////////*/
+/* Main-Area*/
+
+.main-area {
+  padding: 0 10rem;
+  margin-top: 6rem;
+}
+
+.big-title {
+  font-size: 1.3rem;
+  color: var(--light_headline);
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.text {
+  color: var(--light_text);
+  font-size: 1.1rem;
+  margin: 1.9rem 0 2.5rem;
+  max-width: 800px;
+  line-height: 2;
+}
+
+.main-area btn {
+  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+}
+
+/*///////////////////////////////////////*/
+/* Responsiveness*/
+
+@media screen and (max-width: 870px) {
+  .main-area {
+    grid-template-columns: 1fr;
+  }
 }

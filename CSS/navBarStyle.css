@@ -41,6 +41,8 @@ a {
   min-height: 100vh;
   overflow: hidden;
   background-color: var(--light_background);
+  display: flex;
+  flex-direction: column;
 }
 
 /*///////////////////////////////////////*/
