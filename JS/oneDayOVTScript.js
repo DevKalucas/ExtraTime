@@ -29,6 +29,14 @@ const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
   return departureTime;
 };
 
+/* Function to calculate the total worked hours */
+const calcWorkedHours = function (arrivalInput, departureTime) {
+  const arrivalMinutes = timeStringToMinutes(arrivalInput.value);
+  const departureMinutes = timeStringToMinutes(departureTime);
+  const workedMinutes = departureMinutes - arrivalMinutes;
+  return minutesToTimeString(workedMinutes);
+};
+
 /* Function to display the departure Time */
 const departureOutput = document.querySelector(".departureTime");
 const displayTime = function () {
@@ -40,6 +48,21 @@ const displayTime = function () {
   departureOutput.textContent = departureTime || "00:00";
 };
 
-/* Event Listener for the calculater Button */
+// Function to display the total worked hours
+const workedHoursOutput = document.querySelector(".workedHours");
+const displayWorkedHours = function () {
+  const departureTime = calcDepartureTime(
+    arrivalInput,
+    breakInput,
+    overtimeInput
+  );
+  const workedHours = calcWorkedHours(arrivalInput, departureTime);
+  workedHoursOutput.textContent = workedHours || "00:00";
+};
+
+/* Event Listener for the calculate Button */
 const calculateBttn = document.querySelector(".calculateBttn");
-calculateBttn.addEventListener("click", displayTime);
+calculateBttn.addEventListener("click", () => {
+  displayTime();
+  displayWorkedHours();
+});
