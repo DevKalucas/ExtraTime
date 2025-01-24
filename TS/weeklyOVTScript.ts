@@ -109,3 +109,38 @@ function getOverTime(day: string) {
       throw new Error("Could not find day");
   }
 }
+
+function hasInput(day: string) {
+  switch (day) {
+    case "monday":
+      if (arrivalMOInput.value || breakMOInput.value || overtimeMOInput.value) {
+        return true;
+      } else {
+        return false;
+      }
+    case "tuesday":
+      if (arrivalTUInput.value || breakTUInput.value || overtimeTUInput.value) {
+        return true;
+      } else {
+        return false;
+      }
+    case "wednesday":
+      if (arrivalWEInput.value || breakWEInput.value || overtimeWEInput.value) {
+        return true;
+      } else {
+        return false;
+      }
+    case "thursday":
+      if (arrivalTHInput.value || breakTHInput.value || overtimeTHInput.value) {
+        return true;
+      } else {
+        return false;
+      }
+    case "friday":
+      if (arrivalFRInput.value || breakFRInput.value || overtimeFRInput.value) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+}
