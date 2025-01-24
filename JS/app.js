@@ -1,42 +1,6 @@
 /////////////////
 // Time Calculation
 
-function getBreakTime(day) {
-  switch (day) {
-    case "monday":
-      return breakMOInput.value || "00:00";
-    case "tuesday":
-      return breakTUInput.value || "00:00";
-    case "wednesday":
-      return breakWEInput.value || "00:00";
-    case "thursday":
-      return breakTHInput.value || "00:00";
-    case "friday":
-      return breakFRInput.value || "00:00";
-    default:
-      console.log("Not a valid day!");
-      return "0:00";
-  }
-}
-
-function getOverTime(day) {
-  switch (day) {
-    case "monday":
-      return overtimeMOInput.value || "00:00";
-    case "tuesday":
-      return overtimeTUInput.value || "00:00";
-    case "wednesday":
-      return overtimeWEInput.value || "00:00";
-    case "thursday":
-      return overtimeTHInput.value || "00:00";
-    case "friday":
-      return overtimeFRInput.value || "00:00";
-    default:
-      console.log("Not a valid day!");
-      return "0:00";
-  }
-}
-
 function timeStringToMinutes(timeString) {
   const [hours, minutes] = timeString.split(":").map(Number);
   return hours * 60 + minutes;
