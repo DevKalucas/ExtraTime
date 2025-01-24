@@ -17,6 +17,8 @@ function minutesToTimeString(minutes) {
   return `${hours}:${mins}`;
 }
 
+const dismantleCB = document.getElementById("dismantle");
+
 /* Function to calculate the departure Time */
 const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
   const arrivalMinutes = timeStringToMinutes(arrivalInput.value);
@@ -24,7 +26,12 @@ const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
   const overtimeMinutes = timeStringToMinutes(overtimeInput.value);
   let calcDepartureTime;
 
-  calcDepartureTime = arrivalMinutes + overtimeMinutes + breakMinutes + 450;
+  if (dismantleCB.checked) {
+    calcDepartureTime = arrivalMinutes + breakMinutes + 450 - overtimeMinutes;
+  } else {
+    calcDepartureTime = arrivalMinutes + overtimeMinutes + breakMinutes + 450;
+  }
+
   const departureTime = minutesToTimeString(calcDepartureTime);
   return departureTime;
 };
