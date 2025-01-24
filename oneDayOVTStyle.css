@@ -62,7 +62,7 @@ input[type="time"] {
 .vLine {
   margin-left: 1vw;
   border-left: 3px solid var(--light_background);
-  height: 6vw;
+  height: 6.5vw;
   border-radius: 1px;
 }
 
@@ -70,6 +70,7 @@ input[type="time"] {
 /* Calculator Form  */
 .overtimeCalculatorForm {
   padding-top: 2%;
+  padding-bottom: 1%;
   display: flex;
 }
 
