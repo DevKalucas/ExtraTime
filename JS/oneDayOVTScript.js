@@ -3,15 +3,6 @@ const arrivalInput = document.getElementById("input_Arrival");
 const breakInput = document.getElementById("input_Break");
 const overtimeInput = document.getElementById("input_Overtime");
 
-/* Function to detect if all Inputs have values */
-/* const checkInputs = function (arrivalInput, breakInput, overtimeInput) {
-  if (!arrivalInput == "" || breakInput == "" || overtimeInput == "") {
-    return false;
-  } else {
-    return true;
-  }
-}; */
-
 /* Functions to convert time to minutes and minutes to time */
 function timeStringToMinutes(timeString) {
   const [hours, minutes] = timeString.split(":").map(Number);
@@ -28,9 +19,6 @@ function minutesToTimeString(minutes) {
 
 /* Function to calculate the departure Time */
 const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
-  /* if (!checkInputs(arrivalInput, breakInput, overtimeInput)) {
-    return console.error("All fields must be filled!");
-  } else { */
   const arrivalMinutes = timeStringToMinutes(arrivalInput.value);
   const breakMinutes = timeStringToMinutes(breakInput.value);
   const overtimeMinutes = timeStringToMinutes(overtimeInput.value);
@@ -39,7 +27,6 @@ const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
   calcDepartureTime = arrivalMinutes + overtimeMinutes + breakMinutes + 450;
   const departureTime = minutesToTimeString(calcDepartureTime);
   return departureTime;
-  /* } */
 };
 
 /* Function to display the departure Time */
