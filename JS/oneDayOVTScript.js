@@ -27,7 +27,7 @@ const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
   let calcDepartureTime;
 
   if (dismantleCB.checked) {
-    calcDepartureTime = arrivalMinutes + breakMinutes + 450;
+    calcDepartureTime = arrivalMinutes + breakMinutes + 450 - overtimeMinutes;
   } else {
     calcDepartureTime = arrivalMinutes + overtimeMinutes + breakMinutes + 450;
   }
