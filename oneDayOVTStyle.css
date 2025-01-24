@@ -138,8 +138,14 @@ input[type="time"] {
   font-size: 1.25rem;
 }
 
+.third_heading h3 {
+  color: var(--light_headline);
+  font-size: 1.25rem;
+}
+
 .second_info,
-.first_info p {
+.first_info,
+.third_info p {
   color: var(--light_text);
   width: 70%;
   font-size: 1.11rem;
