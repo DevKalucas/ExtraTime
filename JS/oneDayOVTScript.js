@@ -27,11 +27,11 @@ const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
   let calcDepartureTime;
 
   if (dismantleCB.checked) {
-    calcDepartureTime = arrivalMinutes + breakMinutes + 450 - overtimeMinutes;
+    // BUG overtimeMinutes is removed doubled
+    calcDepartureTime = arrivalMinutes + breakMinutes + 450;
   } else {
     calcDepartureTime = arrivalMinutes + overtimeMinutes + breakMinutes + 450;
   }
-
   const departureTime = minutesToTimeString(calcDepartureTime);
   return departureTime;
 };
