@@ -1,7 +1,7 @@
 // NOT USED
 
 // BUG If first time no input abd
-function calcDepartureTime(day) {
+function calDepartureTime(day) {
   switch (day) {
     case "monday":
       const overtime = timeStringToMinutes(getOverTime("monday"));
