@@ -36,10 +36,11 @@ const calcDepartureTime = function (arrivalInput, breakInput, overtimeInput) {
 };
 
 /* Function to calculate the total worked hours */
-const calcWorkedHours = function (arrivalInput, departureTime) {
+const calcWorkedHours = function (arrivalInput, departureTime, breakInput) {
   const arrivalMinutes = timeStringToMinutes(arrivalInput.value);
   const departureMinutes = timeStringToMinutes(departureTime);
-  const workedMinutes = departureMinutes - arrivalMinutes;
+  const breakMinutes = timeStringToMinutes(breakInput.value);
+  const workedMinutes = departureMinutes - arrivalMinutes - breakMinutes;
   return minutesToTimeString(workedMinutes);
 };
 
@@ -62,7 +63,7 @@ const displayWorkedHours = function () {
     breakInput,
     overtimeInput
   );
-  const workedHours = calcWorkedHours(arrivalInput, departureTime);
+  const workedHours = calcWorkedHours(arrivalInput, departureTime, breakInput);
   workedHoursOutput.textContent = workedHours || "00:00";
 };
 

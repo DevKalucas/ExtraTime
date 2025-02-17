@@ -55,6 +55,12 @@ input[type="time"] {
 
 .inputs input {
   margin-right: 2.7em;
+  border-radius: 0.5rem;
+  border-color: transparent;
+}
+
+.inputs input:hover {
+  transform: scale(1.1);
 }
 
 /* ////////////////////////// */
